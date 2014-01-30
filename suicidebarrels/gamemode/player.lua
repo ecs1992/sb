@@ -1,6 +1,7 @@
 function GM:PlayerSpawn( ply )
   if ply:Team() == 1 then
    player_manager.SetPlayerClass( ply, "Barrel" )
+   player_manager.RunClass(client, "Spawn")
   elseif ply:Team() == 2 then
     player_manager.SetPlayerClass( ply, "Hunter" )
   else
