@@ -4,7 +4,7 @@ function set_team()
  
 local frame = vgui.Create( "DFrame" )
 frame:SetPos( ScrW() / 2, ScrH() / 2 ) --Set the window in the middle of the players screen/game window
-frame:SetSize( 200, 210 ) --Set the size
+frame:SetSize( 200, 270 ) --Set the size
 frame:SetTitle( "Change Team" ) --Set title
 frame:SetVisible( true )
 frame:SetDraggable( false )
@@ -26,6 +26,15 @@ team_2:SetSize( 100, 50 )
 team_2:SetText( "Barrel Hunter" )
 team_2.DoClick = function() --Make the player join team Hunters
     RunConsoleCommand( "team_2" )
+    frame:Close()
+end
+ 
+team_3 = vgui.Create( "DButton", frame )
+team_3:SetPos( 50, 170 ) --Place it half way on the tall and 5 units in horizontal
+team_3:SetSize( 100, 50 )
+team_3:SetText( "Spectator" )
+team_3.DoClick = function() --Make the player join team Barrels
+    RunConsoleCommand( "team_3" )
     frame:Close()
 end
  
