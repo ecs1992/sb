@@ -1,5 +1,7 @@
 AddCSLuaFile()
 
+DEFINE_BASECLASS( "player_default" )
+
 local PLAYER = {} 
 
 // Some settings for the class
@@ -9,6 +11,12 @@ PLAYER.CrouchedWalkSpeed 	= 0
 PLAYER.RunSpeed				= 230
 PLAYER.DuckSpeed				= 0
 PLAYER.DrawTeamRing			= false
+
+function PLAYER:Spawn()
+
+	BaseClass.Spawn( self )
+
+end
 
 function PLAYER:Loadout()
   self.Player:RemoveAllAmmo()
@@ -22,4 +30,4 @@ function PLAYER:SetModel()
     self.Player:SetColor(Color(255,255,255,255)
   end
 
-player_manager.RegisterClass( "Barrel", PLAYER, nil )
+player_manager.RegisterClass( "Barrel", PLAYER, "player_default" )
