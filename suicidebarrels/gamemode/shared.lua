@@ -1,4 +1,4 @@
-include( "player_class/player_sandbox.lua" )
+include( "player_class/player_barrel.lua" )
 
 GM.Name = "Suicide Barrels"
 GM.Author = "CAYENNE WEST"
@@ -16,4 +16,15 @@ end
 hook.Add("ShouldDrawLocalPlayer", "AllowDraw", function ( ply )
 	-- body
 	return true
+end)
+
+hook.Add( "CalcView", "overrideCalc", function (ply, pos, angles, fov)
+    if ply:Team() == 1 then
+   	local view = {}
+    view.origin = pos-(angles:Forward()*300)
+    view.angles = angles
+    view.fov = fov
+
+    return view
+	end
 end)

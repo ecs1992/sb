@@ -12,4 +12,15 @@ function GM:PlayerSpawn( ply )
     ply:Spectate(OBS_MODE_ROAMING)
   end
 
+ hook.Add( "CalcView", "overrideCalc", function (ply, pos, angles, fov)
+    if ply:Team() == 1 then
+   	local view = {}
+    view.origin = pos+(angles:Up()*300)
+    view.angles = Angle(90,0,0)
+    view.fov = fov
+
+    return view
+	end
+end)
+
 end
