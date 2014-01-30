@@ -8,7 +8,7 @@ PLAYER.RunSpeed				= 230
 PLAYER.DuckSpeed				= 0.2
 PLAYER.DrawTeamRing			= false
 
-local mdl = {"models/Combine_Super_Soldier.mdl",
+local mdls = {"models/Combine_Super_Soldier.mdl",
 	"models/Combine_Soldier_PrisonGuard.mdl",
 	"models/Combine_Soldier.mdl",
 	"models/Police.mdl"}
