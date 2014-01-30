@@ -1,3 +1,5 @@
+include( "player_class/player_sandbox.lua" )
+
 GM.Name = "Suicide Barrels"
 GM.Author = "CAYENNE WEST"
 GM.Email = "NO@YEAH.NO"
