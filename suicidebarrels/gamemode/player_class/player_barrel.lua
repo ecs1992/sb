@@ -30,4 +30,19 @@ function PLAYER:SetModel()
     self.Player:SetColor(Color(255,255,255,255)
   end
 
+function SWEP:Explode()
+  local k, v
+  local ent = ents.Create( "env_explosion" )
+  ent:SetPos( self.Owner:GetPos() )
+  ent:SetOwner( self.Owner )
+  ent:SetKeyValue( "iMagnitude", "150" )
+  ent:Spawn()
+  ent:Fire( "Explode", 0, 0 )
+  ent:EmitSound( "siege/big_explosion.wav", 500, 500 )
+  self:Remove()
+end
+ 
+
+
 player_manager.RegisterClass( "Barrel", PLAYER, "player_default" )
+
