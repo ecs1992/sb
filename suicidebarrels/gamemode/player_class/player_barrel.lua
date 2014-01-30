@@ -29,20 +29,15 @@ function PLAYER:SetModel()
     self.Player:SetModel(mdl)
     self.Player:SetColor(Color(255,255,255,255)
   end
+  
+function PLAYER:CalcView( view )
+	
+	local view = {}
+	view.origin = pos-(angles:Forward()*300) + (angles:Right()* 100)
+	view.angles = angles
+	view.fov = fov
 
-function SWEP:Explode()
-  local k, v
-  local ent = ents.Create( "env_explosion" )
-  ent:SetPos( self.Owner:GetPos() )
-  ent:SetOwner( self.Owner )
-  ent:SetKeyValue( "iMagnitude", "150" )
-  ent:Spawn()
-  ent:Fire( "Explode", 0, 0 )
-  ent:EmitSound( "siege/big_explosion.wav", 500, 500 )
-  self:Remove()
+	return view
 end
- 
-
 
 player_manager.RegisterClass( "Barrel", PLAYER, "player_default" )
-
