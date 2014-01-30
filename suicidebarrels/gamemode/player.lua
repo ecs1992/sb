@@ -1,3 +1,5 @@
+include( "player_class/player_sandbox.lua" )
+
 function GM:PlayerSpawn( ply )
   if ply:Team() == 1 then
    player_manager.SetPlayerClass( ply, "Barrel" )
