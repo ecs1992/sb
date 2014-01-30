@@ -27,7 +27,7 @@ function PLAYER:SetModel()
     local mdl = "models/props_c17/oildrum001_explosive.mdl"
     util.PrecacheModel(mdl)
     self.Player:SetModel(mdl)
-    self.Player:SetColor(Color(255,255,255,255)
+    self.Player:SetColor(Color(255,255,255,255))
   end
   
 function PLAYER:CalcView( view )
