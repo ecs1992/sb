@@ -13,7 +13,7 @@ frame:MakePopup()
  
 team_1 = vgui.Create( "DButton", frame )
 team_1:SetPos( frame:GetTall() / 2, 5 ) --Place it half way on the tall and 5 units in horizontal
-team_1:SetSize( 50, 100 )
+team_1:SetSize( 100, 50 )
 team_1:SetText( "Booming Barrel" )
 team_1.DoClick = function() --Make the player join team Barrels
     RunConsoleCommand( "team_1" )
@@ -21,7 +21,7 @@ end
  
 team_2 = vgui.Create( "DButton", frame )
 team_2:SetPos( frame:GetTall() / 2, 105 ) --Place it next to our previous one
-team_2:SetSize( 50, 100 )
+team_2:SetSize( 100, 50 )
 team_2:SetText( "Barrel Hunter" )
 team_2.DoClick = function() --Make the player join team Hunters
     RunConsoleCommand( "team_2" )
