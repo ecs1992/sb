@@ -4,7 +4,7 @@ function GM:PlayerSpawn( ply )
   elseif ply:Team() == 2 then
     player_manager.SetPlayerClass( ply, "Hunter" )
   else
-    ply:StripAll()
+    ply:StripWeapons()
     ply:Spectate(OBS_MODE_ROAMING)
   end
 
