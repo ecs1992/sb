@@ -17,7 +17,7 @@ team_1:SetSize( 100, 50 )
 team_1:SetText( "Booming Barrel" )
 team_1.DoClick = function() --Make the player join team Barrels
     RunConsoleCommand( "team_1" )
-    frame:close()
+    frame:Close()
 end
  
 team_2 = vgui.Create( "DButton", frame )
@@ -26,7 +26,7 @@ team_2:SetSize( 100, 50 )
 team_2:SetText( "Barrel Hunter" )
 team_2.DoClick = function() --Make the player join team Hunters
     RunConsoleCommand( "team_2" )
-    frame:close()
+    frame:Close()
 end
  
 end
