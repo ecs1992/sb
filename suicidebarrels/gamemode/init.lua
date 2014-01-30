@@ -6,7 +6,7 @@ include("player.lua")
 
 function GM:PlayerInitialSpawn( ply )
     ply:SetTeam( 3 )
-    RunConsoleCommand( "team_menu" )
+    ply:ConCommand( "team_menu" )
 end 
 
 function team_1( ply )
