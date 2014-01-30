@@ -1,0 +1,13 @@
+"suicidebarrels"
+{
+	"base"		"base"
+	"title"		"Suicide Barrels"
+	"maps"		"^sb_"
+	"menusystem"	"1"
+
+	"settings"
+	{
+		// NOTHIN'
+	}
+
+}
