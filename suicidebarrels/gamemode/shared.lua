@@ -12,3 +12,8 @@ team.SetUp( 3, "Guest", Color( 0, 255, 0, 255 ) )
 function GM:Initialize()
 
 end 
+
+hook.Add("ShouldDrawLocalPlayer", "AllowDraw", function ( ply )
+	-- body
+	return true
+end)
