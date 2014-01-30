@@ -1,4 +1,5 @@
-include( "player_class/player_sandbox.lua" )
+include( "player_class/player_hunter.lua" )
+include( "player_class/player_barrel.lua" )
 
 function GM:PlayerSpawn( ply )
   if ply:Team() == 1 then
